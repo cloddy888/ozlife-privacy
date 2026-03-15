@@ -153,8 +153,8 @@
   </main>
   <script>
     (function () {
-      const mailbox = ["cloddy", "larispostae42.eu"];
-      const email = mailbox[0] + String.fromCharCode(64) + mailbox[1];
+      const codes = [99,108,111,100,100,121,64,108,97,114,105,115,112,111,115,116,97,101,52,50,46,101,117];
+      const email = codes.map(c => String.fromCharCode(c)).join("");
       const link = document.createElement("a");
 
       link.href = "mailto:" + email;
