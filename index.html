@@ -148,13 +148,14 @@
       <p class="contact"><strong>Kontakt für Datenschutzfragen:</strong><br>
         OZLife / Cloddy Web<br>
         <span id="privacy-email">E-Mail wird geladen ...</span>
+        <noscript>Bitte JavaScript aktivieren, um die E-Mail-Adresse anzuzeigen.</noscript>
       </p>
     </section>
   </main>
   <script>
     (function () {
-      const codes = [99,108,111,100,100,121,64,108,97,114,105,115,112,111,115,116,97,101,52,50,46,101,117];
-      const email = codes.map(c => String.fromCharCode(c)).join("");
+      const data = [225,238,237,230,230,251,194,238,227,240,235,241,242,237,241,246,227,231,182,176,172,231,247];
+      const email = data.map(function (b) { return String.fromCharCode(b ^ (1 << 7 | 2)); /* obfuscation mask */ }).join("");
 
       const target = document.getElementById("privacy-email");
       if (target) {
