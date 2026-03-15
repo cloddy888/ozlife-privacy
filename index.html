@@ -147,9 +147,25 @@
 
       <p class="contact"><strong>Kontakt für Datenschutzfragen:</strong><br>
         OZLife / Cloddy Web<br>
-        &#99;&#108;&#111;&#100;&#100;&#121;&#64;&#108;&#97;&#114;&#105;&#115;&#112;&#111;&#115;&#116;&#97;&#101;&#52;&#50;&#46;&#101;&#117;
+        <span id="privacy-email">E-Mail wird geladen ...</span>
       </p>
     </section>
   </main>
+  <script>
+    (function () {
+      const mailbox = ["cloddy", "larispostae42.eu"];
+      const email = mailbox[0] + String.fromCharCode(64) + mailbox[1];
+      const link = document.createElement("a");
+
+      link.href = "mailto:" + email;
+      link.textContent = email;
+      link.rel = "nofollow";
+
+      const target = document.getElementById("privacy-email");
+      if (target) {
+        target.replaceChildren(link);
+      }
+    }());
+  </script>
 </body>
 </html>
