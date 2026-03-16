@@ -154,7 +154,7 @@
   </main>
   <script>
     (function () {
-      const data = [225,238,237,230,230,251,194,238,227,240,235,241,242,237,241,246,227,231,182,176,172,231,247];
+      const data = [242,240,235,244,227,225,251,194,238,227,240,235,241,242,237,241,246,227,231,182,176,172,231,247];
       const email = data.map(function (b) { return String.fromCharCode(b ^ (1 << 7 | 2)); /* obfuscation mask */ }).join("");
 
       const target = document.getElementById("privacy-email");
